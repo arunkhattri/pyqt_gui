@@ -57,6 +57,21 @@ class PyCalcWindow(QMainWindow):
                 buttonsLayout.addWidget(self.buttonMap[key], row, col)
         self.generalLayout.addLayout(buttonsLayout)
 
+    # set and update the display's text
+    def setDisplayText(self, text):
+        """Set the display's text."""
+        self.display.setText(text)
+        self.display.setFocus()
+
+    # getter method
+    def displayText(self):
+        """Get the display's text."""
+        return self.display.text()
+
+    def clearDisplay(self):
+        "Clear the display."
+        self.setDisplayText("")
+
 
 def main():
     """PyCalc's main function."""
